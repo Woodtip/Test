@@ -6,12 +6,14 @@ enum class BunOptions(val description: String) {
     Kaiser("Kaiser Roll"),
     Lettuce("Lettuce Wrap");
 
-    fun convertSpinnerText(spinnerText: String): BunOptions {
-        return when(spinnerText){
-            Brioche.description -> Brioche
-            Sesame.description -> Sesame
-            Kaiser.description -> Kaiser
-            else -> Lettuce
+    companion object {
+        fun convertSpinnerText(spinnerText: String): BunOptions {
+            return when(spinnerText){
+                Brioche.description -> Brioche
+                Sesame.description -> Sesame
+                Kaiser.description -> Kaiser
+                else -> Lettuce
+            }
         }
     }
 

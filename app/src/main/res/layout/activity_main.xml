@@ -95,7 +95,7 @@
 
     <ImageView
         android:id="@+id/ivImage"
-        android:layout_width="190dp"
+        android:layout_width="match_parent"
         android:layout_height="190dp"
         android:layout_marginTop="16dp"
         android:outlineProvider="bounds"
@@ -175,12 +175,10 @@
         android:id="@+id/spBunTypes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
         android:entries="@array/bun_types"
-        app:layout_constraintBaseline_toBaselineOf="@+id/cbOnion"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toEndOf="@+id/cbOnion" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbLettuce" />
 
     <CheckBox
         android:id="@+id/cbLettuce"
@@ -212,17 +210,17 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Submit Order"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cbOnion" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spBunTypes" />
 
     <TextView
         android:id="@+id/tvOrderStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:text="Please submit your order."
         app:layout_constraintBaseline_toBaselineOf="@+id/btnSubmitOrder"
-        app:layout_constraintStart_toEndOf="@+id/btnSubmitOrder" />
+        app:layout_constraintEnd_toStartOf="@+id/btnSubmitOrder" />
 
     <View
         android:id="@+id/di3"
