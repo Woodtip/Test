@@ -1,0 +1,29 @@
+<resources>
+
+    <string name="app_name">Test</string>
+    <string name="submit_order">Please submit order.</string>
+    <string name="order_submitted">Order submitted.</string>
+    <string name="exception_intro">Exception: </string>
+    <string name="addition_error">\?\?\?</string>
+    <string-array name="bun_types">
+        <item>Brioche Bun</item>
+        <item>Sesame Seed Bun</item>
+        <item>Kaiser Roll</item>
+        <item>Lettuce Wrap</item>
+    </string-array>
+
+    <!-- Toast Strings -->
+    <string name="toast_error">Error</string>
+    <string name="toast_numbers_added">Numbers Added</string>
+    <string name="toast_image_displayed">Image Displayed</string>
+    <string name="toast_image_hidden">Image Hidden</string>
+    <string name="toast_order_submitted">Order Submitted</string>
+    <string name="no_permissions_requested">No Permissions Requested</string>
+    <string name="permissions_requested">Permissions Requested</string>
+    <string name="add_contact">Contact Added</string>
+    <string name="favorite_page">Page Favorited</string>
+    <string name="send_feedback">Feedback Sent</string>
+    <string name="coming_soon">Coming Soon</string>
+
+
+</resources>

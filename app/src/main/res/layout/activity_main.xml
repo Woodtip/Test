@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    app:layout_constraintHorizontal_weight="2"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/etNumber1"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="#"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/tvPlusSign"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnAddNumbers"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:text="Add Numbers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNumber2" />
+
+    <TextView
+        android:id="@+id/tvEqualsSign"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="="
+        android:textAlignment="center"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etNumber2"
+        app:layout_constraintEnd_toStartOf="@+id/tvAdditionResult"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/etNumber2" />
+
+    <TextView
+        android:id="@+id/tvAdditionResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="\?"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvEqualsSign"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="3"
+        app:layout_constraintStart_toEndOf="@+id/tvEqualsSign" />
+
+    <TextView
+        android:id="@+id/tvPlusSign"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:textAlignment="center"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etNumber1"
+        app:layout_constraintEnd_toStartOf="@+id/etNumber2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/etNumber1" />
+
+    <EditText
+        android:id="@+id/etNumber2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="#"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvPlusSign"
+        app:layout_constraintEnd_toStartOf="@+id/tvEqualsSign"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="3"
+        app:layout_constraintStart_toEndOf="@+id/tvPlusSign" />
+
+    <View
+        android:id="@+id/di1"
+        android:layout_width="379dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddNumbers" />
+
+    <ImageView
+        android:id="@+id/ivImage"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="16dp"
+        android:outlineProvider="bounds"
+        android:scaleType="fitCenter"
+        android:src="@drawable/puppy"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/di1" />
+
+    <Button
+        android:id="@+id/btnDisplayImage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Display Image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnChooseImage"
+        app:layout_constraintTop_toBottomOf="@+id/ivImage" />
+
+    <View
+        android:id="@+id/di2"
+        android:layout_width="379dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDisplayImage" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="What do you want on your burger?"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/di2" />
+
+    <RadioGroup
+        android:id="@+id/rgMeats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+        <RadioButton
+            android:id="@+id/rbBeef"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:checked="true"
+            android:text="Beef" />
+
+        <RadioButton
+            android:id="@+id/rbChicken"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="Chicken" />
+
+        <RadioButton
+            android:id="@+id/rbTurkey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Turkey" />
+
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/spBunTypes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:entries="@array/bun_types"
+        app:layout_constraintBaseline_toBaselineOf="@+id/cbOnion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toEndOf="@+id/cbOnion" />
+
+    <CheckBox
+        android:id="@+id/cbLettuce"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:text="Lettuce"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgMeats" />
+
+    <CheckBox
+        android:id="@+id/cbTomato"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:text="Tomato"
+        app:layout_constraintStart_toEndOf="@+id/cbLettuce"
+        app:layout_constraintTop_toBottomOf="@+id/rgMeats" />
+
+    <CheckBox
+        android:id="@+id/cbOnion"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:text="Onion"
+        app:layout_constraintStart_toEndOf="@+id/cbTomato"
+        app:layout_constraintTop_toBottomOf="@+id/rgMeats" />
+
+    <Button
+        android:id="@+id/btnSubmitOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Submit Order"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbOnion" />
+
+    <TextView
+        android:id="@+id/tvOrderStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Please submit your order."
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnSubmitOrder"
+        app:layout_constraintStart_toEndOf="@+id/btnSubmitOrder" />
+
+    <View
+        android:id="@+id/di3"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSubmitOrder" />
+
+    <Button
+        android:id="@+id/btnNextActivity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Go to Next Page"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnChooseImage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Choose Image"
+        app:layout_constraintEnd_toStartOf="@+id/btnDisplayImage"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivImage" />
+</androidx.constraintlayout.widget.ConstraintLayout>
